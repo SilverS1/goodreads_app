@@ -1,0 +1,21 @@
+<% provide(:title, 'New Book') %> 
+<h1>New Book</h1>
+
+<div class = "row"> 
+	<div class = "col-md-6 col-md-offset-3">
+		<%= form_for(@book) do |f| %>
+			<%= f.label :title %> 
+			<%= f.text_field :title, class: "form-control" %> 
+			
+			<%= f.label :author %> 
+			<%= f.email_field :author, class: "form-control" %>
+			
+			<%= f.label :synopsis %> 
+			<%= f.email_field :synopsis, class: "form-control", :style => "height: 200px"%>
+			
+			<p class = "line-height"></p>
+
+			<%= f.submit  "Create a book", class: "btn btn-primary" %> 
+		<% end %>
+	</div>
+</div>

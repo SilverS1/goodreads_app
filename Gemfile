@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'bootstrap-sass', '3.2.0.0'
-
+gem 'will_paginate', '3.0.7'
+gem 'carrierwave', '0.10.0' # used for users to upload things
+gem 'mini_magick', '3.8.0' # used for resizing images
+gem 'bootstrap-will_paginate', '0.0.10'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
