@@ -3,7 +3,7 @@ require 'test_helper'
 class BookTest < ActiveSupport::TestCase
   
   def setup
-  	@book = Book.new(title: "Example Book", author: "Foobar", synopsis: "A lovely example book.")
+  	@book = Book.new(title: "Example Book", author: "Foobar", genre: "example", synopsis: "A lovely example book.")
   end
   
   test "book is valid?" do 

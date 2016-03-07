@@ -1,10 +1,29 @@
 Rails.application.routes.draw do
+  resources :searches
+
   root 'static_pages#home'
   get 'index' => 'books#index'
   get 'new' => 'books#new'
+  get 'edit' => 'books#edit'
+  get 'browse_index' => 'books#browse_index'
+  get 'browse_genre' => 'books#browse_genre'
+  get 'browse_tags' => 'books#browse_tags'
+  get 'browse_reviews' => 'reviews#browse_reviews'
+  get 'browse_ratings' => 'books#browse_ratings'
+  get 'browse_selected_genre' => 'books#browse_selected_genre'
+  get 'new_review' => 'reviews#new'
+  get 'tags/:tag', to: 'books#books_index', as: :tag
   Rails.application.routes.draw do
-  	resources :books
+  resources :searches
+
+  post '/rate' => 'rater#create', :as => 'rate'
+  	resources :books do
+  		resources :reviews
+  		get :tag
+  	end
   end
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -14,3 +14,29 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(function() {
+  $("#books th a, #books .pagination a").live("click", function() {
+    $.getScript(this.href);
+    return false;
+  });
+  $("#books_search input").keyup(function() {
+    $.get($("#books_search").attr("action"), $("#books_search").serialize(), null, "script");
+    return false;
+  });
+});
+
+$(function() {
+  $("#reviews th a, #reviews .pagination a").live("click", function() {
+    $.getScript(this.href);
+    return false;
+  });
+  $("#reviews_search input").keyup(function() {
+    $.get($("#reviews_search").attr("action"), $("#reviews_search").serialize(), null, "script");
+    return false;
+  });
+});
+
+
+

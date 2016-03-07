@@ -1,0 +1,21 @@
+<%= provide(:title, "Browse Ratings") %>
+
+<%= link_to "Back", browse_index_path %>
+
+<h1>Browse by Ratings</h1>
+
+<%= form_tag @book, :method => 'get' do %>
+  		<p>	
+    		<%= text_field_tag :search, params[:search] %>
+    		<%= submit_tag "Search", :name => nil %>
+  		</p>
+  		
+  		
+<% end %>
+
+<ul class = "books" > 
+	<%= render @books.uniq %>
+</ul>
+
+<%= will_paginate @books.uniq %>
+

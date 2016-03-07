@@ -1,3 +1,9 @@
 <li>
-	<%= link_to book.title, book %> 
+	<div>
+		<%= image_tag book.cover_url(:thumb).to_s, class: "index-book-cover" %>
+	</div>
+	<div class = "index-book-info">
+		<%= link_to book.title, book %>
+		<p>by <%= book.author %> </p>
+	<div>
 </li>

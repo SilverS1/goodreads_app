@@ -1,8 +1,13 @@
 <% provide(:title, "Books Index") %> 
-<h1>Books</h1>
+<div>
+	<h1 class = "books-heading">Books</h1>
+	<h3 class = "new-book"><%= link_to "New Book", new_path %></h3>
+</div>
 
 
 <ul class = "books" > 
 	<%= render @books %>
 </ul>
+
+<%= will_paginate @books %>
 
