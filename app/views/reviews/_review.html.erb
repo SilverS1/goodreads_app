@@ -1,0 +1,15 @@
+<div class = "review-div">
+	<div class = "review-date">
+		Added <%= review.created_at.strftime("%d/%m/%Y")%>
+	</div>
+	<div>
+		Rated <%= review.rating %> stars
+	</div>
+	<div>
+		<%= review.content %>
+	</div>
+	<div class = "review-edit-delete" >
+		<%= link_to "Edit", edit_book_review_path(review.book, review) %>
+		<%= link_to "Delete", book_review_path(review.book, review), method: :delete, data: { confirm: "Are you sure?"} %>
+	</div>
+</div>

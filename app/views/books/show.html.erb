@@ -1,0 +1,82 @@
+<%= provide(:title, @book.title) %>
+<div class = "center jumbotron" id = "center-width">
+
+<%= link_to "Back", :back %>
+
+<table class = "table-position"> 
+	<tr>
+		<td>
+			<div class = "table-align">
+				<div>
+					<%= image_tag @book.cover_url(:thumb).to_s, class: "show-book-cover" %>
+				</div>
+			</div>
+		<td>
+		<td class = "table-align">
+			<div class = "show-book-title">
+				<%= @book.title  %>
+			</div>
+			<div class = "show-book-author"> 
+				by <%= @book.author %>
+			</div>
+			<div>
+				<%= @book.synopsis %>
+			</div>
+			<div> 
+				Genre: <%= @book.genre %>
+			</div>
+			<div>
+			<% if @book.tags.any? %>
+				<div class = "tag-title">
+					Tagged as: 
+				</div>
+     			<% @book.tags.each do |tag| %>
+     			<div>
+     				<li class = "tag-list"><%= tag.name %>,</li>
+     			</div> 
+     			<% end %>
+     		<% else %>
+     			<div></div>
+     		<% end %>
+			</div>
+		</td>
+	</tr>	
+</table>
+	<div>
+		<div>
+			<h3 class = "edit-book"><%= link_to "Edit Book", edit_book_path(@book) %></h3>
+		</div>
+		<div>
+			<h3 class = "delete-book"><%= link_to "Delete Book", @book, method: :delete, data: {confirm: "You sure?"} %></h3>
+		</div>
+	</div>
+</div>
+
+<br></br>
+
+<div class = "center jumbotron">
+<div>
+	<h3 class = "show-add-review" ><%= link_to "Add Review", new_book_review_path(@book) %></h3>
+</div>
+<div>
+	<% @reviews.each do |review| %>
+		<div class = "show-show-reviews">
+		<%= render review %>
+		</div>
+	<% end %>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

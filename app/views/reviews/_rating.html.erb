@@ -1,0 +1,9 @@
+<div class = "review-date">
+		<%= review.created_at.strftime("%d/%m/%Y")%>
+	</div>
+	<div>
+		Rated <%= review.rating %> stars
+	</div>
+	<div>
+		<%= review.content %>
+	</div>

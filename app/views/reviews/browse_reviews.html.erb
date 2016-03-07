@@ -1,0 +1,22 @@
+<%= provide(:title, "Browse") %>
+
+<h1>Browse by Reviews</h1>
+
+<div>
+	<%= form_tag @rating, :method => 'get', :id => "reviews_search" do %>
+  		<p>	
+    		<%= text_field_tag :search, params[:search] %>
+    		<%= submit_tag "Search", :name => nil %>
+  		</p>
+  		
+  		<div id="reviews"><%= render 'reviews' %></div>
+  		
+	<% end %>
+</div>
+
+
+<ul class = "reviews" > 
+	<%= render @reviews %>
+</ul>
+
+<%= will_paginate @reviews %>

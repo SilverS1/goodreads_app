@@ -3,6 +3,12 @@
 
 /* universal */
 
+.group:after {
+	display: table;
+	clear: both;
+	content: " ";
+}
+
 body {
 	padding-top: 60px;
 	background-color: #bd8f63;
@@ -76,6 +82,189 @@ footer {
 footer small {
 		float: left; 
 }
+
+/* new */
+
+.line-height {
+	line-height: 1px;
+}
+
+/* index */
+
+.index-book-cover {
+	height: 100px;
+	width: 67px; 
+	float: left;
+	margin: 5px;
+}
+
+.index-book-info {
+	margin: 5px;
+}
+
+.books-heading {
+	position: relative; 
+	text-align: center;
+}
+
+.books {
+	list-style: none; 
+	margin: 0; 
+	li { 
+		overflow: auto; 
+		padding: 10px 0; 
+		border-bottom: 1px solid $gray-lighter;
+	}
+	a{
+		color: black;
+	}
+}
+
+.new-book {
+	color: black;
+	position: relative;
+	
+	a {
+		text-decoration: none;
+		color: black; 
+		&hover {
+			
+		}
+	}
+}
+
+/* show */
+
+#center-width {
+	// width: 550px;
+	width: 80%;
+	margin: auto;
+}
+
+.table-position {
+	margin-left:auto; 
+    margin-right:auto;
+    width: 100%;
+}
+
+.show-book-cover {
+	height: 230px;
+	display: block;
+}
+
+.show-book-title {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.show-book-author {
+	font-size: 13px;
+}
+
+
+.table-align {
+	margin: 10px;
+	display: block;
+	text-align: left;
+	margin: 10px;
+}
+
+.edit-book {
+	list-style: none; 
+	margin: 0; 
+	a {
+		text-decoration: none;
+		color: black; 
+		font-size: 17px;
+		font-style: normal;
+	}
+}
+
+.delete-book {
+	list-style: none; 
+	margin: 0; 
+	a {
+		text-decoration: none;
+		color: black; 
+		font-size: 17px;
+		font-style: normal;
+	}
+
+}
+
+.show-edit-delete {
+	font-size: 10px;
+}
+
+.show-add-review {
+	list-style: none;
+	a {
+		color: black
+	}
+
+}
+
+.show-show-reviews {
+	margin-bottom: 10px;
+}
+
+.tag-title {
+	font-size: 25px; 
+	font-weight: bold;
+}
+
+.tag-list {
+	list-style: none;
+	display: inline-block;
+	float: left;
+}
+
+
+/* edit */
+
+.edit-choices {
+	list-style: none; 
+	margin: 0;
+	font-size: 15px;  
+	li { 
+		overflow: auto;  
+	}
+	a{
+		color: black;
+	}
+}
+
+.edit-back-button {
+	float: left;
+}
+
+/* reviews */
+
+.review-edit-delete {
+	list-style: none;
+	a {
+		color: black
+	}
+	
+}
+
+.review-div {
+	background-color: white;
+	text-align: left;
+	font-size: 20px;
+}
+
+.review-date {
+	font-style: italic;
+}
+
+/* browse index */
+
+#browse-search-field {
+	width: 20%;
+}
+
+
 
 
 

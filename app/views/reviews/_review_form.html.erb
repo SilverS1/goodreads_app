@@ -1,0 +1,26 @@
+<div class = "row">
+	<div class = "col-md-6 col-md-offset-3">
+		<%= form_for([@book, @book.reviews.build]) do |f| %>
+			
+			<%= f.label :rating %>
+			<%= f.select :rating, ((0..5).map {|i| [i,i] }), class: "form-control" %>
+			
+			<p class = "line-height"></p>
+			
+			
+			<%= f.label :content %> 
+			<%= f.text_area :content, class: "form-control", :style => "height: 200px; vertical-align: text-top;" %> 
+			
+			<p class = "line-height"></p>
+			
+			<%= f.submit  "Create review", class: "btn btn-primary", data: {disable_with: "Creating..."} %> 
+		
+		<% end %>
+	</div>
+</div>
+
+
+
+
+
+

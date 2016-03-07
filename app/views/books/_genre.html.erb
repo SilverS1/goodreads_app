@@ -1,0 +1,10 @@
+<% @books.select(:genre).distinct.each do |book| %>
+	<%= link_to book.genre, browse_selected_genre_path %>
+<% end %>
+
+
+
+
+
+
+

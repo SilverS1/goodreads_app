@@ -1,0 +1,21 @@
+<%= provide(:title, "Edit Review") %>
+
+<%= link_to "Back", @book %>
+
+<h1>Edit Review</h1>
+
+<div class = "row">
+	<div class = "col-md-6 col-md-offset-3">
+		<%= form_for([@book, @review]) do |f| %>
+
+			<%= f.label :content %>
+			<%= f.text_field :content, class: "form-control" %>
+	
+			<p class = "line-height"></p>
+	
+			<%= f.submit "Update review", class: "btn btn-primary", data: {disable_with: "Updating..."} %>
+
+		<% end %>
+	</div>
+</div>
+

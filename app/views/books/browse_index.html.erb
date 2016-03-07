@@ -1,0 +1,28 @@
+<%= provide(:title, "Browse") %>
+
+<h1>Browse</h1>
+
+<h3><%= link_to "Genre", browse_genre_path %></h3>
+<h3><%= link_to "Rating", browse_ratings_path %></h3>
+<h3><%= link_to "Tags", browse_tags_path %></h3>
+
+<div>
+	<%= form_tag @book, :method => 'get', :id => "products_search" do %>
+  		<p>	
+    		<%= text_field_tag :search, params[:search] %>
+    		<%= submit_tag "Search", :name => nil %>
+  		</p>
+  		
+  		<div id="books"><%= render 'books' %></div>
+  		
+	<% end %>
+</div>
+
+
+<ul class = "books" > 
+	<%= render @books %>
+</ul>
+
+<%= will_paginate @books %>
+
+
