@@ -12,8 +12,11 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151116131759) do
 =======
+=======
+>>>>>>> halp
 ActiveRecord::Schema.define(version: 20151211153412) do
 
   create_table "average_caches", force: :cascade do |t|
@@ -24,6 +27,9 @@ ActiveRecord::Schema.define(version: 20151211153412) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+<<<<<<< HEAD
+>>>>>>> halp
+=======
 >>>>>>> halp
 
   create_table "books", force: :cascade do |t|
@@ -33,8 +39,11 @@ ActiveRecord::Schema.define(version: 20151211153412) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
 <<<<<<< HEAD
+<<<<<<< HEAD
   end
 =======
+=======
+>>>>>>> halp
     t.string   "image"
     t.string   "cover"
     t.string   "genre"
@@ -106,6 +115,9 @@ ActiveRecord::Schema.define(version: 20151211153412) do
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true
+<<<<<<< HEAD
+>>>>>>> halp
+=======
 >>>>>>> halp
 
 end

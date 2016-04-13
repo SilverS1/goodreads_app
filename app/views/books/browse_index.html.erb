@@ -2,9 +2,9 @@
 
 <h1>Browse</h1>
 
-<h3><%= link_to "Genre", browse_genre_path %></h3>
-<h3><%= link_to "Rating", browse_ratings_path %></h3>
-<h3><%= link_to "Tags", browse_tags_path %></h3>
+<h3><%= link_to "Genre", browse_genre_path, class: "browse-links" %></h3>
+<h3><%= link_to "Rating", browse_ratings_path, class: "browse-links" %></h3>
+<h3><%= link_to "Tags", browse_tags_path, class: "browse-links" %></h3>
 
 <div>
 	<%= form_tag @book, :method => 'get', :id => "products_search" do %>
